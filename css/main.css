@@ -6,7 +6,7 @@ body
 h1, h2, h3, p
 {
 	margin: 0;
-	letter-spacing: 1px;
+	letter-spacing: 0.5px;
 }
 
 ul
@@ -28,6 +28,10 @@ ul
 	clear: both;	
 }
 
+/* =============
+     自定义样式  
+   ============= */
+
 /*   header   */
 
 header .content
@@ -39,6 +43,22 @@ header .content
 	line-height: 4em;
 }
 
+@media screen and (max-width: 55em) {
+	header .content
+	{
+		text-align: center;
+		margin: 0 0 2em;
+	}
+}
+
+@media screen and (max-width: 40em) {
+	header .content
+	{
+		text-align: center;
+		margin: 0 0 2em;
+	}
+}
+
 /*   时间   */
 
 .container
@@ -47,15 +67,10 @@ header .content
 	margin: 0 auto;
 }
 
-.container .item
-{
-	position: relative;
-}
-
 .container .item h2
 {
 	float: left;
-	width: 11%;
+	width: 16%;
 	color: #66CCFF;
 	font-size: 2rem;
 	line-height: 2.2rem;
@@ -70,36 +85,44 @@ header .content
 	display: block;
 }
 
+@media screen and (max-width: 55em) {
+	.container .item h2
+	{
+		font-size: 1.5rem;
+		line-height: 1.7rem;
+	}
+}
+
+@media screen and (max-width: 40em) {
+	.container .item h2
+	{
+		width: 100%;
+		text-align: left;
+	}
+}
+
 /*   内容   */
 
 .container .item .wrapper
 {
 	box-sizing: border-box;
-	width: 85%;
+	width: 83%;
 	float: right;
 	border-left: #66ccff 7px solid;
 }
 
-.container .item .wrapper:after
-{
-	content: ' ';
-	position: absolute;
-	top: 5%; 
-	left: 19.8%;
-	width: 0;
-	height: 0;
-	border: 10px solid transparent;
-	border-right: 10px solid #66ccff;
+@media screen and (max-width: 40em) {
+	.container .item .wrapper
+	{
+		margin-top: 1rem;
+		border-left: 0;
+		width: 100%;
+	}	
 }
-
-.container .item:nth-child(even) .wrapper:after
-{
-	border-right-color: #52a3cc;
-}
-
 
 .container .item .wrapper .content
 {
+	position: relative;
 	float: right;
 	width: 93%;
 	margin-bottom: 1rem;
@@ -108,11 +131,59 @@ header .content
 	background-color: #66CCFF;
 }
 
+@media screen and (max-width: 40em) {
+	.container .item .wrapper .content
+	{
+		width: 100%;
+	}
+}
+
+
 .container .item .wrapper .content article
 {
 	padding: 2.2rem 2rem;
 }
 
+.container .item .wrapper .content article:after
+{
+	content: ' ';
+	position: absolute;
+	right: 100%;
+	top: 10px;
+	width: 0;
+	height: 0;
+	border: 10px solid transparent;
+	border-right: 10px solid #66ccff;
+}
+
+@media screen and (max-width: 40em) {
+	.container .item .wrapper .content article:after
+	{
+		content: ' ';
+		position: absolute;
+		top: -20px;
+		left: 15px;
+		width: 0;
+		height: 0;
+		border: 10px solid transparent;
+		border-bottom: 10px solid #66ccff;
+	}
+}
+
+.container .item:nth-child(even) .wrapper .content article:after
+{
+	border-right-color: #52a3cc;
+}
+
+@media screen and (max-width: 40em) {
+
+	.container .item:nth-child(even) .wrapper .content article:after
+	{
+		border-right-color: transparent;
+		border-bottom-color: #52a3cc;
+	}
+
+}
 
 .container .item:nth-child(even) .wrapper .content article
 {
