@@ -28,21 +28,34 @@ ul
 	clear: both;	
 }
 
+/*   header   */
+
 header .content
 {
+	font-size: 2em;
 	color: #038fd4;
-	margin: 2rem;
-	margin-left: 4rem;
-	line-height: 4rem;
+	margin: 2em;
+	margin-left: 4em;
+	line-height: 4em;
 }
 
 /*   时间   */
 
+.container
+{
+	width: 90%;
+	margin: 0 auto;
+}
+
+.container .item
+{
+	position: relative;
+}
+
 .container .item h2
 {
-	margin: 0 1rem;
 	float: left;
-	width: 13%;
+	width: 11%;
 	color: #66CCFF;
 	font-size: 2rem;
 	line-height: 2.2rem;
@@ -62,11 +75,28 @@ header .content
 .container .item .wrapper
 {
 	box-sizing: border-box;
-	width: 80%;
+	width: 85%;
 	float: right;
-	margin-right: 2rem;
 	border-left: #66ccff 7px solid;
 }
+
+.container .item .wrapper:after
+{
+	content: ' ';
+	position: absolute;
+	top: 5%; 
+	left: 19.8%;
+	width: 0;
+	height: 0;
+	border: 10px solid transparent;
+	border-right: 10px solid #66ccff;
+}
+
+.container .item:nth-child(even) .wrapper:after
+{
+	border-right-color: #52a3cc;
+}
+
 
 .container .item .wrapper .content
 {
@@ -83,9 +113,11 @@ header .content
 	padding: 2.2rem 2rem;
 }
 
+
 .container .item:nth-child(even) .wrapper .content article
 {
 	background-color: rgba(0,0,0,0.2);
+	border-radius: 5px;
 }
 
 
