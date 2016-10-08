@@ -1,0 +1,112 @@
+body
+{
+	font-size: 62.5%;		
+}
+
+h1, h2, h3, p
+{
+	margin: 0;
+	letter-spacing: 1px;
+}
+
+ul
+{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.clearfix:before,
+.clearfix:after
+{
+	display: table;
+	content: " ";
+}
+
+.clearfix:after
+{
+	clear: both;	
+}
+
+header .content
+{
+	color: #038fd4;
+	margin: 2rem;
+	margin-left: 4rem;
+	line-height: 4rem;
+}
+
+/*   时间   */
+
+.container .item h2
+{
+	margin: 0 1rem;
+	float: left;
+	width: 13%;
+	color: #66CCFF;
+	font-size: 2rem;
+	line-height: 2.2rem;
+	text-align: right;
+}
+
+.container .item h2 .date
+{
+	font-size: 0.3rem;
+	color: #9c9c9c;
+	font-style: normal;
+	display: block;
+}
+
+/*   内容   */
+
+.container .item .wrapper
+{
+	box-sizing: border-box;
+	width: 80%;
+	float: right;
+	margin-right: 2rem;
+	border-left: #66ccff 7px solid;
+}
+
+.container .item .wrapper .content
+{
+	float: right;
+	width: 93%;
+	margin-bottom: 1rem;
+	border-radius: 5px;
+	color: #fff;
+	background-color: #66CCFF;
+}
+
+.container .item .wrapper .content article
+{
+	padding: 2.2rem 2rem;
+}
+
+.container .item:nth-child(even) .wrapper .content article
+{
+	background-color: rgba(0,0,0,0.2);
+}
+
+
+.container .item .wrapper .content article .title
+{
+
+	font-size: 1.7rem;
+	font-weight: 900;
+	line-height: 2.5rem;
+}
+
+.container .item .wrapper .content article .hr
+{
+	height: 1px;
+	background-color: #e2e2e2;
+	margin-bottom: 1rem;
+}
+
+.container .item .wrapper .content article .text
+{
+	font-size: 0.9rem;
+	line-height: 1.4rem;
+}
+
